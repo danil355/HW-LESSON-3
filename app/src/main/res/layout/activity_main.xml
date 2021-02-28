@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
+        android:inputType="textPersonName"
+        android:hint="Введите Логин: " />
+
+    <EditText
+        android:id="@+id/password_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:inputType="textPassword"
+        android:hint="Введите пароль: " />
+
+    <TextView
+        android:id="@+id/textview"
+        android:hint="Результат: "
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:id="@+id/buttonVisible"
+        android:text="Изменение видимости в View"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:id="@+id/buttonCheckText"
+        android:text="Считывать текст"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+</RelativeLayout>
