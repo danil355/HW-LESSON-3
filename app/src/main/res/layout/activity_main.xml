@@ -29,21 +29,21 @@
         android:hint="Введите пароль: " />
 
     <TextView
-        android:id="@+id/textview"
+        android:id="@+id/textview_result"
         android:hint="Результат: "
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
 
     <Button
-        android:id="@+id/buttonVisible"
+        android:id="@+id/button_visible_in_views"
         android:text="Изменение видимости в View"
         android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
 
     <Button
-        android:id="@+id/buttonCheckText"
+        android:id="@+id/button_CheckText"
         android:text="Считывать текст"
         android:layout_marginTop="200dp"
         android:layout_width="match_parent"

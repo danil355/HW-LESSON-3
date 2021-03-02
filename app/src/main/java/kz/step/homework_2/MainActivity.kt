@@ -1,19 +1,20 @@
 package kz.step.homework_2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-var editLogin: EditText? = null
-var editPassword: EditText? = null
-var textView: TextView? = null
-var buttonVissible: Button? = null
-var buttonText: Button? = null
+var editTextViewLogin: EditText? = null
+var editTextViewPassword: EditText? = null
+var textViewResult: TextView? = null
+var buttonVisibleInViews: Button? = null
+var buttonReadText: Button? = null
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,11 +23,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeViews() {
-        editLogin = findViewById(R.id.login)
-        editPassword = findViewById(R.id.password_toggle)
-        textView = findViewById(R.id.textview)
-        buttonVissible = findViewById(R.id.buttonVisible)
-        buttonText = findViewById(R.id.buttonCheckText)
+        editTextViewLogin = findViewById(R.id.login)
+        editTextViewPassword = findViewById(R.id.password_toggle)
+        textViewResult = findViewById(R.id.textview_result)
+        buttonVisibleInViews = findViewById(R.id.button_visible_in_views)
+        buttonReadText = findViewById(R.id.button_CheckText)
     }
 
     private fun initializeLiseners() {
@@ -36,35 +37,36 @@ class MainActivity : AppCompatActivity() {
         var password: String = "fallen"
 
 
-        buttonVissible?.setOnClickListener{
+        buttonVisibleInViews?.setOnClickListener{
             if(visible == true)
             {
 
-                editLogin?.visibility = View.INVISIBLE
-                editPassword?.visibility = View.INVISIBLE
-                textView?.visibility = View.INVISIBLE
-                buttonText?.visibility = View.INVISIBLE
+                editTextViewLogin?.visibility = View.INVISIBLE
+                editTextViewPassword?.visibility = View.INVISIBLE
+                textViewResult?.visibility = View.INVISIBLE
+                buttonReadText?.visibility = View.INVISIBLE
                 visible = false
             }
 
             else{
-                editLogin?.visibility = View.VISIBLE
-                editPassword?.visibility = View.VISIBLE
-                textView?.visibility = View.VISIBLE
-                buttonText?.visibility = View.VISIBLE
+                editTextViewLogin?.visibility = View.VISIBLE
+                editTextViewPassword?.visibility = View.VISIBLE
+                textViewResult?.visibility = View.VISIBLE
+                buttonReadText?.visibility = View.VISIBLE
                 visible = true
             }
         }
 
-        buttonText?.setOnClickListener {
-            if(editLogin?.text?.toString() == login && editPassword?.text?.toString() == password)
+        buttonReadText?.setOnClickListener {
+            if(editTextViewLogin?.text?.toString() == login && editTextViewPassword?.text?.toString() == password)
             {
-                textView?.text = "It is so sad =("
+                textViewResult?.text = "It is so sad =("
             }
 
             else{
-                textView?.text = "Все норм!"
+                textViewResult?.text = "Все норм!"
             }
         }
     }
+
 }
